@@ -3,16 +3,17 @@ import {Observable} from 'rxjs';
 import {Employee} from '../model/employee';
 import {EmployeeService} from '../services/employee.service';
 import {Router} from '@angular/router';
+import {AuthService} from '../services/auth.service';
 
 @Component({
-  selector: "app-employee-list",
-  templateUrl: "./employee-list.component.html",
-  styleUrls: ["./employee-list.component.css"]
+  selector: 'app-employee-list',
+  templateUrl: './employee-list.component.html',
+  styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
   employees: Observable<Employee[]>;
 
-  constructor(private employeeService: EmployeeService,
+  constructor(private employeeService: EmployeeService, public authService: AuthService,
               private router: Router) {}
 
   ngOnInit() {
