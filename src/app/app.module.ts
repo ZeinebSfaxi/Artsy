@@ -19,6 +19,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import {AuthService} from './services/auth.service';
+import { UpdateArtComponent } from './update-art/update-art.component';
+import {CreateArtComponent} from './create-art/create-art.component';
+import {ArtDetailsComponent} from './art-details/art-details.component';
+import {ArtListComponent} from './art-list/art-list.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import {AuthService} from './services/auth.service';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    CreateArtComponent,
+    ArtDetailsComponent,
+    ArtListComponent,
+    UpdateArtComponent
   ],
   imports: [
     BrowserModule,

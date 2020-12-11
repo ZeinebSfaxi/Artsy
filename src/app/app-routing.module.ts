@@ -10,15 +10,19 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 import {VerifyEmailComponent} from './verify-email/verify-email.component';
 import {AuthGuard} from './services/services/guard/auth.guard';
+import {ArtListComponent} from './art-list/art-list.component';
+import {CreateArtComponent} from './create-art/create-art.component';
+import {UpdateArtComponent} from './update-art/update-art.component';
+import {ArtDetailsComponent} from './art-details/art-details.component';
 
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'employee', pathMatch: 'full'},
-  {path: 'employees', component: EmployeeListComponent},
-  {path: 'add', component: CreateEmployeeComponent},
-  {path: 'update/:id', component: UpdateEmployeeComponent},
-  {path: 'details/:id', component: EmployeeDetailsComponent},
+  {path: '', redirectTo: 'art', pathMatch: 'full'},
+  {path: 'arts', component: ArtListComponent},
+  {path: 'add', component: CreateArtComponent},
+  {path: 'update/:id', component: UpdateArtComponent},
+  {path: 'details/:id', component: ArtDetailsComponent},
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },

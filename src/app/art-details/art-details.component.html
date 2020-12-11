@@ -1,10 +1,10 @@
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" style="background-image: url(assets/img/vayne.jpg)">
+<section class="breadcrumb-section set-bg" style="background-image: url(assets/img/gallery/gallery-6.jpg)">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="breadcrumb-text">
-          <h2>Your Profile</h2>
+          <h2>Details</h2>
         </div>
       </div>
     </div>
@@ -17,19 +17,22 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6 p-0">
-        <div class="about-video set-bg" style="background-color: #1b1e21">
-          <img src="assets/img/logo.png">
+        <div class="about-video set-bg" style="background-color: #000000">
+          <img src="assets/img/gallery/{{art.image}}">
         </div>
       </div>
-      <div class="col-lg-6 p-0" >
-        <div class="about-text" style="background-color: #1b1e21" *ngIf="authService.userData as user" >
+      <div class="col-lg-6 p-0">
+        <div class="about-text" *ngIf="art">
           <div class="section-title">
-            <span>Profile Details:</span>
-            <h2>{{user.displayName}} name</h2>
+            <span>Art Details:</span>
+            <h2>{{art.name}}</h2>
+          </div>
+          <div class="at-desc">
+            <p>{{art.descrip}}</p>
           </div>
           <div class="about-bar">
             <div class="ab-item">
-              <p>{{user.uid}}</p>
+              <p>Made by: {{art.artist}}</p>
               <div id="bar1" class="barfiller">
                 <span class="fill" data-percentage="80"></span>
                 <div class="tipWrap">
@@ -38,7 +41,7 @@
               </div>
             </div>
             <div class="ab-item">
-              <p>{{user.email}}</p>
+              <p><i class="fa fa-heart"></i>{{art.jaime}}</p>
               <div id="bar2" class="barfiller">
                 <span class="fill" data-percentage="85"></span>
                 <div class="tipWrap">
@@ -46,19 +49,12 @@
                 </div>
               </div>
             </div>
-            <div class="ab-item">
-              <p>{{user.emailVerified}}</p>
-              <div id="bar3" class="barfiller">
-                <span class="fill" data-percentage="75"></span>
-                <div class="tipWrap">
-                  <span class="tip"></span>
-                </div>
-              </div>
-            </div>
-            <button (click)="authService.SignOut()" class="btn btn-outline-warning">Log Out</button>
+
+            <button (click)="list()" class="btn btn-outline-warning">Back to Employee List</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<!-- About US Section End -->

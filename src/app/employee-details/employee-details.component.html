@@ -1,18 +1,71 @@
-<h2>Employee Details</h2>
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg" style="background-image: url(assets/img/gallery/gallery-6.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="breadcrumb-text">
+          <h2>Details</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<hr/>
-<div *ngIf="employee">
-  <div>
-    <label><b>First Name: </b></label> {{employee.firstName}}
-  </div>
-  <div>
-    <label><b>Last Name: </b></label> {{employee.lastName}}
-  </div>
-  <div>
-    <label><b>Email Id: </b></label> {{employee.emailId}}
-  </div>
-</div>
 
-<br>
-<br>
-<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>
+<!-- About US Section Begin -->
+<section class="aboutus-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 p-0">
+        <div class="about-video set-bg" style="background-color: #000000">
+        <img src="assets/img/gallery/173476.png">
+        </div>
+      </div>
+      <div class="col-lg-6 p-0">
+        <div class="about-text" *ngIf="employee">
+          <div class="section-title">
+            <span>Art Details:</span>
+            <h2>{{employee.firstName}}</h2>
+          </div>
+          <div class="at-desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+              viverra maecenas accumsan lacus vel facilisis. aliquip ex ea commodo consequat sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          </div>
+          <div class="about-bar">
+            <div class="ab-item">
+              <p>{{employee.lastName}}</p>
+              <div id="bar1" class="barfiller">
+                <span class="fill" data-percentage="80"></span>
+                <div class="tipWrap">
+                  <span class="tip"></span>
+                </div>
+              </div>
+            </div>
+            <div class="ab-item">
+              <p>{{employee.lastName}}</p>
+              <div id="bar2" class="barfiller">
+                <span class="fill" data-percentage="85"></span>
+                <div class="tipWrap">
+                  <span class="tip"></span>
+                </div>
+              </div>
+            </div>
+            <div class="ab-item">
+              <p>{{employee.emailId}}</p>
+              <div id="bar3" class="barfiller">
+                <span class="fill" data-percentage="75"></span>
+                <div class="tipWrap">
+                  <span class="tip"></span>
+                </div>
+              </div>
+            </div>
+            <button (click)="list()" class="btn btn-outline-warning">Back to Employee List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About US Section End -->
