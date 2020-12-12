@@ -27,8 +27,8 @@
             <input type="text" class="form-control" id="name" required [(ngModel)]="art.name" name="name" placeholder="Title">
             <input type="text" class="form-control" id="descrip" required [(ngModel)]="art.descrip" name="descrip" placeholder="Description">
             <input type="text" class="form-control" id="artist" required [(ngModel)]="art.artist" name="artist" placeholder="The artist's name">
-            <input type="text" class="form-control" id="image" required [(ngModel)]="art.image" name="image" placeholder="image">
             <!-- <input type="file" class="form-control" id="image" name="image" accept="image/*" [(ngModel)]="art.image">-->
+            <input type="file" class="form-control" id="image" name="image" accept=".png, .jpg, .jpeg" (change)="onFileChanged($event)" >
             <button type="submit">Submit</button>
           </form>
         </div>

@@ -43,4 +43,9 @@ export class UpdateArtComponent implements OnInit {
   gotoList() {
     this.router.navigate(['/arts']);
   }
+  onFileChanged(event) {
+    const file = event.target.files[0].name;
+    this.art.image = file;
+    console.log(file);
+  }
 }

@@ -23,6 +23,7 @@ import { UpdateArtComponent } from './update-art/update-art.component';
 import {CreateArtComponent} from './create-art/create-art.component';
 import {ArtDetailsComponent} from './art-details/art-details.component';
 import {ArtListComponent} from './art-list/art-list.component';
+import { ArtComponent } from './art/art.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {ArtListComponent} from './art-list/art-list.component';
     CreateArtComponent,
     ArtDetailsComponent,
     ArtListComponent,
-    UpdateArtComponent
+    UpdateArtComponent,
+    ArtComponent
   ],
   imports: [
     BrowserModule,

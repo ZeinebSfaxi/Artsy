@@ -66,9 +66,10 @@
         <p class="card-text">{{art.descrip}}</p>
         <p>Made by: {{art.artist}}</p>
         <td>
-          <button (click)="deleteArt(art.id)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
           <button (click)="updateArt(art.id)" class="btn btn-info" style="margin-left: 10px"><i class="fa fa-edit"></i></button>
           <button (click)="artDetails(art.id)" class="btn btn-success" style="margin-left: 10px"><i class="fa fa-eye"></i></button>
+          <button (click)="artDetails(art.id)" class="btn btn-warning" style="margin-left: 10px"><i style="color: white" class="fa fa-heart"> {{art.jaime}}</i></button>
+          <button (click)="deleteArt(art.id)" class="btn btn-danger"  style="margin-left: 10px"><i class="fa fa-trash"></i></button>
         </td>
       </div>
     </div>

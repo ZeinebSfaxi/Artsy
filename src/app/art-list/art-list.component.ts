@@ -13,13 +13,14 @@ import {AuthService} from '../services/auth.service';
 export class ArtListComponent implements OnInit {
   arts: Observable<Art[]>;
 
-  constructor(private artService: ArtService, public authService: AuthService , private router: Router) { }
+  constructor(private artService: ArtService, public authService: AuthService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.reloadData();
   }
 
-  reloadData(){
+  reloadData() {
     this.arts = this.artService.getArtsList();
   }
 
@@ -33,11 +34,12 @@ export class ArtListComponent implements OnInit {
         error => console.log(error));
   }
 
-  artDetails(id: number){
+  artDetails(id: number) {
     this.router.navigate(['details', id]);
   }
 
-  updateArt(id: number){
+  updateArt(id: number) {
     this.router.navigate(['update', id]);
   }
 }
+

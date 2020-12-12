@@ -18,7 +18,7 @@ import {ArtDetailsComponent} from './art-details/art-details.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'art', pathMatch: 'full'},
+  {path: '', redirectTo: 'arts', pathMatch: 'full'},
   {path: 'arts', component: ArtListComponent},
   {path: 'add', component: CreateArtComponent},
   {path: 'update/:id', component: UpdateArtComponent},
