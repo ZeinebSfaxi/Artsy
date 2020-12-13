@@ -1,1 +1,14 @@
-<p>art works!</p>
+<div class="card" style="background-color: #0b0b0b">
+  <img src="assets/img/gallery/{{art.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title" style="color: white">{{art.name}}</h5>
+    <p class="card-text">{{art.descrip}}</p>
+    <p>Made by: {{art.artist}}</p>
+    <td>
+      <button (click)="sendNotif()" class="btn btn-info" style="margin-left: 10px"><i class="fa fa-edit"></i></button>
+      <button (click)="sendNotif2()" class="btn btn-warning" style="margin-left: 10px"><i style="color: white" class="fa fa-heart"> {{art.jaime}}</i></button>
+      <button (click)="sendNotif3()" class="btn btn-success" style="margin-left: 10px"><i class="fa fa-eye"></i></button>
+      <button (click)="sendNotif4()" class="btn btn-danger"  style="margin-left: 10px"><i class="fa fa-trash"></i></button>
+    </td>
+  </div>
+</div>

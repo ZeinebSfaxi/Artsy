@@ -41,5 +41,9 @@ export class ArtListComponent implements OnInit {
   updateArt(id: number) {
     this.router.navigate(['update', id]);
   }
+  incrementLike(art: Art){
+      art.jaime++;
+    }
+
 }
 

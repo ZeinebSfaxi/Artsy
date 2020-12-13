@@ -25,11 +25,11 @@
         <div class="about-text" style="background-color: #1b1e21" *ngIf="authService.userData as user" >
           <div class="section-title">
             <span>Profile Details:</span>
-            <h2>{{user.displayName}} name</h2>
+            <h2>User</h2>
           </div>
           <div class="about-bar">
             <div class="ab-item">
-              <p>{{user.uid}}</p>
+              <!-- <p>{{user.uid}}</p> -->
               <div id="bar1" class="barfiller">
                 <span class="fill" data-percentage="80"></span>
                 <div class="tipWrap">
@@ -46,15 +46,7 @@
                 </div>
               </div>
             </div>
-            <div class="ab-item">
-              <p>{{user.emailVerified}}</p>
-              <div id="bar3" class="barfiller">
-                <span class="fill" data-percentage="75"></span>
-                <div class="tipWrap">
-                  <span class="tip"></span>
-                </div>
-              </div>
-            </div>
+
             <button (click)="authService.SignOut()" class="btn btn-outline-warning">Log Out</button>
           </div>
         </div>

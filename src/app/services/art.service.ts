@@ -32,4 +32,5 @@ export class ArtService {
   getArtsList(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
+
 }

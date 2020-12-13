@@ -4,6 +4,7 @@ import {Employee} from '../model/employee';
 import {EmployeeService} from '../services/employee.service';
 import {Router} from '@angular/router';
 import {ArtService} from '../services/art.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-create-art',
@@ -13,11 +14,18 @@ import {ArtService} from '../services/art.service';
 export class CreateArtComponent implements OnInit {
   art: Art = new Art();
   submitted = false;
+  registerForm: FormGroup;
 
   constructor(private artService: ArtService, private router: Router) { }
 
   ngOnInit(): void {
     this.art.jaime = 0;
+    this.registerForm = new FormGroup({
+      name: new FormControl('',[Validators.required, Validators.pattern('[a-zA-Z]+$')]),
+      descrip: new FormControl ('',[Validators.required, Validators.pattern('[a-zA-Z]+$')]),
+      artist: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]+$')]),
+      image: new FormControl(''),
+    } )
   }
 
   newArt(): void {
