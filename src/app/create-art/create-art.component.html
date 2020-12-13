@@ -26,9 +26,19 @@
         <div class="leave-comment">
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <input type="text" formControlName="name" class="form-control" id="name" required [(ngModel)]="art.name" name="name" placeholder="Title">
-            <input type="text" formControlName="descrip" class="form-control" id="descrip" required [(ngModel)]="art.descrip" name="descrip" placeholder="Description">
+
+            <div style="color: #ba8b00" *ngIf="registerForm.controls['name'].errors && registerForm.controls['name'].touched"> requiring a string</div>
+
+            <input type="text" formControlName="descrip" class="form-control" id="descrip"  [(ngModel)]="art.descrip" name="descrip"
+                   required  placeholder="Description">
+
+            <div style="margin-bottom: 3px ;color: #ba8b00" *ngIf="registerForm.controls['descrip'].errors && registerForm.controls['descrip'].touched"> requiring a string</div>
+
             <input type="text" formControlName="artist" class="form-control" id="artist" required [(ngModel)]="art.artist" name="artist" placeholder="The artist's name">
            <!-- <input type="text" class="form-control" id="image" required [(ngModel)]="art.image" name="image" placeholder="image"> -->
+
+            <div style="color: #ba8b00" *ngIf="registerForm.controls['artist'].errors && registerForm.controls['artist'].touched"> required</div>
+
            <input type="file" formControlName="image" class="form-control" id="image" name="image" accept=".png, .jpg, .jpeg" (change)="onFileChanged($event)" >
 
             <button type="submit">Submit</button>
